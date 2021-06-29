@@ -1,0 +1,1 @@
+launch Noordhoff Downloader.bat and use one of the links from "All Books Links i Know.txt" (first copy the url of the book you want, by the seccond input use the number of pages that is next to the name above the url in the txt file)
