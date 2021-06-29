@@ -125,12 +125,8 @@ color e
 set /p name= "how would you like the folder with the files to be called? "
 mkdir %name%
 move download\*.png %name%\
+start explorer.exe "%cd%\%name%"
 goto end
-
-:ugh
-echo creating pdf...
-convert.exe %name%\*.png %name%%l%
-echo pdf made!
 
 :end
 echo done!
