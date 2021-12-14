@@ -102,7 +102,7 @@ set /A pagej=pagej-1
 set /A page=page+pagej
 echo added %page% lines of text
 
-wget.exe  --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 3 -i list.txt
+wget.exe  --retry-connrefused --secure-protocol=auto --load-cookies=cookies.txt --no-check-certificate --waitretry=1 --read-timeout=20 --timeout=15 -t 2 -i list.txt
 
 if not exist download\ mkdir download
 if not exist download\jpg\ mkdir download\jpg
