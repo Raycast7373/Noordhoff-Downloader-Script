@@ -17,7 +17,7 @@ set "l=.pdf"
 
 
 set "firstpage=1"
-set /p lastpage= "How many pages are there? Example: 244 "
+set /p lastpage= "How many pages are there? Example: 244, If the ammount of pages is under 101, type in: 101| "
 
 
 set /A "page=firstpage"
@@ -102,7 +102,7 @@ set /A pagej=pagej-1
 set /A page=page+pagej
 echo added %page% lines of text
 
-wget.exe  --retry-connrefused --secure-protocol=auto --no-check-certificate --waitretry=1 --read-timeout=20 --timeout=15 -t 2 -i list.txt
+wget.exe  --retry-connrefused --secure-protocol=auto --load-cookies=cookies.txt --no-check-certificate --waitretry=1 --read-timeout=20 --timeout=15 -t 2 -i list.txt
 
 if not exist download\ mkdir download
 if not exist download\jpg\ mkdir download\jpg
