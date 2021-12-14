@@ -123,8 +123,8 @@ move download\jpg\*.png download\
 echo Done converting!
 color e
 set /p name= "how would you like the folder with the files to be called? "
-mkdir %name%
-move download\*.png %name%\
+mkdir" %name%"
+move download\*.png "%name%\"
 start explorer.exe "%cd%\%name%"
 goto end
 
