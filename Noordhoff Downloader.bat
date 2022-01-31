@@ -17,9 +17,11 @@ set "l=.pdf"
 
 
 set "firstpage=1"
-set /p lastpage= "How many pages are there? Example: 244, If the ammount of pages is under 101, type in: 101| "
+echo "How many pages are there? Example: 244"
+set /p lastpage=
 
-
+if %lastpage% LSS 101 set "lastpage=101"
+echo number is under 101, setting last page to 101 to prevent a infinity loop
 set /A "page=firstpage"
 set /A lastpage=lastpage+1
 set /A "pagej=page"
